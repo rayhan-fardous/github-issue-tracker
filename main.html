@@ -1,1 +1,48 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Issues Tracker</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- DAISYUI -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@5"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- TAILWINDCSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+</head>
+<body class="font-geist text-sm text-neutral font-normal bg-base-200 w-full pt-20 min-h-screen">
+  <!-- Header -->
+  <header class="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full">
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl w-fit flex items-center gap-1.5">
+        <img src="./assets/github-logo.png" alt="Github Logo" class="w-9">GitHub Issues Tracker
+      </a>
+    </div>
+    <div class="flex gap-3">
+      <form id="search-form" class="flex gap-2">
+        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="flex flex-col gap-3 p-3 w-[80%] mx-auto">
+    <section id="tabs-container" class=" bg-base-100 p-5 rounded-sm flex flex-wrap gap-3 items-center shadow-sm">
+      <button class="btn btn-primary">All</button>
+      <button class="btn btn-outline">Open</button>
+      <button class="btn btn-outline">Closed</button>
+    </section>
+  </main>
+</body>
+</html>
