@@ -5,3 +5,28 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.container{
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 12px;
+  padding-right: 12px;
+}
+
+.tab-btn{
+  padding: 4px 16px;
+  background: transparent;
+  border: 2px solid var(--color-base-300);
+  color: var(--color-neutral);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tab-btn:hover{
+  background: var(--color-base-300);
+}
+.tab-btn.active{
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+}
