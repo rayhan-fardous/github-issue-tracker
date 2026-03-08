@@ -30,7 +30,7 @@
   />
 </head>
 
-<body class="font-geist text-sm text-neutral font-normal bg-base-300/60 w-full pt-20 min-h-screen">
+<body class="font-geist text-sm text-neutral font-normal bg-base-200 w-full pt-20 min-h-screen">
   <!-- Header -->
   <header class="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full">
     <div class="flex-1">
@@ -48,9 +48,9 @@
 
   <main class="flex flex-col gap-4 p-3 w-full md:w-[80%] mx-auto container">
     <section id="tabs-container" class=" bg-base-100 p-5 rounded-sm flex flex-wrap gap-3 items-center shadow-sm">
-      <button class="tab-btn active">All</button>
-      <button class="tab-btn">Open</button>
-      <button class="tab-btn">Closed</button>
+      <button class="tab-btn active" data-tab="">All</button>
+      <button class="tab-btn" data-tab="open">Open</button>
+      <button class="tab-btn" data-tab="closed">Closed</button>
     </section>
 
     <div>
@@ -61,7 +61,7 @@
             <img src="./assets/Aperture.png" alt="Open Issue" class="w-6">
           </span>
           <div>
-            <span class="text-xl font-semibold"><span id="issues-count">50</span> Issues</span>
+            <span class="text-xl font-semibold"><span id="issue-counter">50</span> Issues</span>
             <p class="text-neutral/58">Track and manage your project issues</p>
           </div>
         </div>
@@ -76,10 +76,10 @@
         </div>
       </section>
 
-      <section class="w-full bg-base-200 p-5 rounded-b-sm shadow-sm">
+      <section class="w-full bg-base-100/60 p-5 rounded-b-sm shadow-sm">
         <span id="spinner" class="loading loading-spinner loading-sm py-20 mx-auto block"></span>
         
-        <div id="issue-cards-container" class="grid-cols-3 sm:grid-cols-4 gap-4 hidden"></div>
+        <div id="issue-cards-container" class="grid-cols-3 sm:grid-cols-4 gap-4 hidden" data-theme="corporate"></div>
       </section>
     </div>
   </main>
@@ -88,5 +88,6 @@
   <!-- Scripts -->
   <script src="./scripts/script.js"></script>
   <script src="./scripts/loadIssues.js"></script>
+  <script src="./scripts/toggleTab.js"></script>
 </body>
 </html>

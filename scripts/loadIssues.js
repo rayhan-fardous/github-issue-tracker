@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
   setLoading(true);
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
   .then((res) => res.json())
-  .then((json) => renderIssues(json?.data));
+  .then((json) => {
+    issues = json?.data;
+    renderIssues(json?.data);
+  })
 });
 
 const setLoading = (on = true) => {
@@ -20,6 +23,7 @@ const setLoading = (on = true) => {
 };
 
 const renderIssues = (issues = []) => {
+  issueCounter.textContent = issues?.length;
   issueCardsContainer.innerHTML = "";
 
   issues?.map((issue) => {

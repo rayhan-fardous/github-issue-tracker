@@ -1,12 +1,12 @@
-loginForm.addEventListener("submit", (e) => {
+loginForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const formData = new formData(e.target);
-  const { username, password } = Object.fromEntries(formData.fromEntries());
+  const formData = new FormData(e.target);
+  const { username, password } = Object.fromEntries(formData);
 
-  if(username === "admin" && password === "admin123"){
+  if (username === "admin" && password === "admin123") {
     window.location.assign("/main.html");
-  }else{
+  } else {
     alert("Invalid Credentials");
   }
 });
