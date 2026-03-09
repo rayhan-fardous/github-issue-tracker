@@ -29,8 +29,9 @@ const renderIssues = (issues = []) => {
   if(issues.length > 0){
     issues?.map((issue, index) => {
       const issueDiv = document.createElement("div");
-      issueDiv.classList = `issue-div w-full max-w-[345px] rounded-md border-t-3 ${issue?.status === "open" ? "border-green-600" : "border-purple-600"} bg-base-100 shadow-sm`;
+      issueDiv.classList = `issue-div w-full max-w-[345px] rounded-md mx-auto border-t-3 ${issue?.status === "open" ? "border-green-600" : "border-purple-600"} bg-base-100 shadow-sm`;
       
+      issueDiv.style.animationDelay = `${index * 80}ms`;
       issueDiv.dataset.id = issue?.id;
 
       issueDiv.innerHTML = `<div class="p-4 flex flex-col gap-3 border-b border-base-300">
