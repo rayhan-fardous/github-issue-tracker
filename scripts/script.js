@@ -4,3 +4,4 @@ const issueCardsContainer = document.getElementById("issue-cards-container");
 const spinner = document.getElementById("spinner");
 const tabsContainer = document.getElementById("tabs-container");
 const issueCounter = document.getElementById("issue-counter");
+const searchForm = document.getElementById("search-form");
